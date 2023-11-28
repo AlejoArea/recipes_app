@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'generated/ingredient.freezed.dart';
-
 part 'generated/ingredient.g.dart';
 
 @Freezed()

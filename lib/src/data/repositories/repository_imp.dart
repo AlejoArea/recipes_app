@@ -6,30 +6,34 @@
 
 import 'dart:convert';
 import 'dart:io';
-import 'package:recipes_practice_app/src/domain/repositories/repository_interface.dart';
-import 'package:http/http.dart' as http;
 
-class Repository implements IRepository<RecipesResponse, RecipeModel> {
+import 'package:http/http.dart' as http;
+import 'package:recipes_practice_app/src/domain/repositories/repository_interface.dart';
+
+import '../../domain/entity/recipe.dart';
+import '../model/recipe_response_model.dart';
+
+class Repository extends IRepository {
   static const String apiKey = '?apiKey=bba7ffa1cf38426487bdd9cf45fdeef7';
   static const String baseUrl = 'https://api.spoonacular.com/recipes/';
   static const responseError = 'Response Error';
 
   @override
-  Future<RecipeModel> getRecipeById(int id) async {
+  Future<Recipe> getRecipeById(int id) async {
     final response =
         await http.get(Uri.parse('$baseUrl$id/information$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
-      return RecipeModel.fromJson(jsonDecode(response.body));
+      return Recipe.fromJson(jsonDecode(response.body));
     } else {
       throw Exception(responseError);
     }
   }
 
   @override
-  Future<RecipesResponse> getRecipes() async {
+  Future<ResponseModel> fetchRecipes() async {
     final response = await http.get(Uri.parse('$baseUrl/complexSearch$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
-      return RecipesResponse.fromJson(jsonDecode(response.body));
+      return ResponseModel.fromJson(jsonDecode(response.body));
     } else {
       throw Exception(responseError);
     }

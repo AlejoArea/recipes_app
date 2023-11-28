@@ -21,10 +21,13 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Recipe {
   int get id => throw _privateConstructorUsedError;
+
   String get title => throw _privateConstructorUsedError;
+
   String get imageType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $RecipeCopyWith<Recipe> get copyWith => throw _privateConstructorUsedError;
 }
@@ -33,6 +36,7 @@ mixin _$Recipe {
 abstract class $RecipeCopyWith<$Res> {
   factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) then) =
       _$RecipeCopyWithImpl<$Res, Recipe>;
+
   @useResult
   $Res call({int id, String title, String imageType});
 }
@@ -44,6 +48,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -76,6 +81,7 @@ abstract class _$$RecipeImplCopyWith<$Res> implements $RecipeCopyWith<$Res> {
   factory _$$RecipeImplCopyWith(
           _$RecipeImpl value, $Res Function(_$RecipeImpl) then) =
       __$$RecipeImplCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call({int id, String title, String imageType});
@@ -173,10 +179,13 @@ abstract class _Recipe implements Recipe {
 
   @override
   int get id;
+
   @override
   String get title;
+
   @override
   String get imageType;
+
   @override
   @JsonKey(ignore: true)
   _$$RecipeImplCopyWith<_$RecipeImpl> get copyWith =>
