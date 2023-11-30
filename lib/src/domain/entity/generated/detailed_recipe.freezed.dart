@@ -21,38 +21,23 @@ FullRecipe _$FullRecipeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FullRecipe {
   int get id => throw _privateConstructorUsedError;
-
   String get title => throw _privateConstructorUsedError;
-
   String get image => throw _privateConstructorUsedError;
-
   int get servings => throw _privateConstructorUsedError;
-
   int get readyInMinutes => throw _privateConstructorUsedError;
-
   num get healthScore => throw _privateConstructorUsedError;
-
   num get pricePerServing => throw _privateConstructorUsedError;
-
   bool get cheap => throw _privateConstructorUsedError;
-
   bool get dairyFree => throw _privateConstructorUsedError;
-
   bool get glutenFree => throw _privateConstructorUsedError;
-
   bool get vegan => throw _privateConstructorUsedError;
-
   bool get vegetarian => throw _privateConstructorUsedError;
-
   List<String> get dishTypes => throw _privateConstructorUsedError;
-
   List<Ingredient> get extendedIngredients =>
       throw _privateConstructorUsedError;
-
   String get summary => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $FullRecipeCopyWith<FullRecipe> get copyWith =>
       throw _privateConstructorUsedError;
@@ -63,7 +48,6 @@ abstract class $FullRecipeCopyWith<$Res> {
   factory $FullRecipeCopyWith(
           FullRecipe value, $Res Function(FullRecipe) then) =
       _$FullRecipeCopyWithImpl<$Res, FullRecipe>;
-
   @useResult
   $Res call(
       {int id,
@@ -90,7 +74,6 @@ class _$FullRecipeCopyWithImpl<$Res, $Val extends FullRecipe>
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -184,7 +167,6 @@ abstract class _$$FullRecipeImplCopyWith<$Res>
   factory _$$FullRecipeImplCopyWith(
           _$FullRecipeImpl value, $Res Function(_$FullRecipeImpl) then) =
       __$$FullRecipeImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call(
@@ -347,7 +329,6 @@ class _$FullRecipeImpl implements _FullRecipe {
   @override
   final bool vegetarian;
   final List<String> _dishTypes;
-
   @override
   List<String> get dishTypes {
     if (_dishTypes is EqualUnmodifiableListView) return _dishTypes;
@@ -356,7 +337,6 @@ class _$FullRecipeImpl implements _FullRecipe {
   }
 
   final List<Ingredient> _extendedIngredients;
-
   @override
   List<Ingredient> get extendedIngredients {
     if (_extendedIngredients is EqualUnmodifiableListView)
@@ -461,49 +441,34 @@ abstract class _FullRecipe implements FullRecipe {
 
   @override
   int get id;
-
   @override
   String get title;
-
   @override
   String get image;
-
   @override
   int get servings;
-
   @override
   int get readyInMinutes;
-
   @override
   num get healthScore;
-
   @override
   num get pricePerServing;
-
   @override
   bool get cheap;
-
   @override
   bool get dairyFree;
-
   @override
   bool get glutenFree;
-
   @override
   bool get vegan;
-
   @override
   bool get vegetarian;
-
   @override
   List<String> get dishTypes;
-
   @override
   List<Ingredient> get extendedIngredients;
-
   @override
   String get summary;
-
   @override
   @JsonKey(ignore: true)
   _$$FullRecipeImplCopyWith<_$FullRecipeImpl> get copyWith =>

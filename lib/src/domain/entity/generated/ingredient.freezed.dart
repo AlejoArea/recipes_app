@@ -21,19 +21,13 @@ Ingredient _$IngredientFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Ingredient {
   String get aisle => throw _privateConstructorUsedError;
-
   double get amount => throw _privateConstructorUsedError;
-
   int get id => throw _privateConstructorUsedError;
-
   String get image => throw _privateConstructorUsedError;
-
   String get name => throw _privateConstructorUsedError;
-
   String get original => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $IngredientCopyWith<Ingredient> get copyWith =>
       throw _privateConstructorUsedError;
@@ -44,7 +38,6 @@ abstract class $IngredientCopyWith<$Res> {
   factory $IngredientCopyWith(
           Ingredient value, $Res Function(Ingredient) then) =
       _$IngredientCopyWithImpl<$Res, Ingredient>;
-
   @useResult
   $Res call(
       {String aisle,
@@ -62,7 +55,6 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -111,7 +103,6 @@ abstract class _$$IngredientImplCopyWith<$Res>
   factory _$$IngredientImplCopyWith(
           _$IngredientImpl value, $Res Function(_$IngredientImpl) then) =
       __$$IngredientImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call(
@@ -249,22 +240,16 @@ abstract class _Ingredient implements Ingredient {
 
   @override
   String get aisle;
-
   @override
   double get amount;
-
   @override
   int get id;
-
   @override
   String get image;
-
   @override
   String get name;
-
   @override
   String get original;
-
   @override
   @JsonKey(ignore: true)
   _$$IngredientImplCopyWith<_$IngredientImpl> get copyWith =>

@@ -21,15 +21,11 @@ ResponseModel _$ResponseModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ResponseModel {
   List<Recipe> get results => throw _privateConstructorUsedError;
-
   int get offset => throw _privateConstructorUsedError;
-
   int get number => throw _privateConstructorUsedError;
-
   int get totalResults => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ResponseModelCopyWith<ResponseModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -40,7 +36,6 @@ abstract class $ResponseModelCopyWith<$Res> {
   factory $ResponseModelCopyWith(
           ResponseModel value, $Res Function(ResponseModel) then) =
       _$ResponseModelCopyWithImpl<$Res, ResponseModel>;
-
   @useResult
   $Res call({List<Recipe> results, int offset, int number, int totalResults});
 }
@@ -52,7 +47,6 @@ class _$ResponseModelCopyWithImpl<$Res, $Val extends ResponseModel>
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -91,7 +85,6 @@ abstract class _$$ResponseModelImplCopyWith<$Res>
   factory _$$ResponseModelImplCopyWith(
           _$ResponseModelImpl value, $Res Function(_$ResponseModelImpl) then) =
       __$$ResponseModelImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({List<Recipe> results, int offset, int number, int totalResults});
@@ -148,7 +141,6 @@ class _$ResponseModelImpl implements _ResponseModel {
       _$$ResponseModelImplFromJson(json);
 
   final List<Recipe> _results;
-
   @override
   List<Recipe> get results {
     if (_results is EqualUnmodifiableListView) return _results;
@@ -215,16 +207,12 @@ abstract class _ResponseModel implements ResponseModel {
 
   @override
   List<Recipe> get results;
-
   @override
   int get offset;
-
   @override
   int get number;
-
   @override
   int get totalResults;
-
   @override
   @JsonKey(ignore: true)
   _$$ResponseModelImplCopyWith<_$ResponseModelImpl> get copyWith =>

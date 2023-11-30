@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'src/config/routes/routes.dart';
 
-import 'src/presentation/views/home_view.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  final Routes _routes = Routes();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Recipes App',
-      home: HomeView(),
+      routes: _routes.getRoutes(),
+      initialRoute: '/home',
     );
   }
 }

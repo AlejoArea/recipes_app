@@ -9,6 +9,7 @@ class Recipe with _$Recipe {
     required int id,
     required String title,
     required String imageType,
+    required String image,
   }) = _Recipe;
 
   factory Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);

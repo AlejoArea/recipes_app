@@ -16,11 +16,11 @@ import '../model/recipe_response_model.dart';
 class Repository extends IRepository {
   static const String apiKey = '?apiKey=bba7ffa1cf38426487bdd9cf45fdeef7';
   static const String baseUrl = 'https://api.spoonacular.com/recipes/';
-  static const responseError = 'Response Error';
+  static const String responseError = 'Response Error';
 
   @override
   Future<Recipe> getRecipeById(int id) async {
-    final response =
+    final http.Response response =
         await http.get(Uri.parse('$baseUrl$id/information$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
       return Recipe.fromJson(jsonDecode(response.body));
@@ -31,7 +31,7 @@ class Repository extends IRepository {
 
   @override
   Future<ResponseModel> fetchRecipes() async {
-    final response = await http.get(Uri.parse('$baseUrl/complexSearch$apiKey'));
+    final http.Response response = await http.get(Uri.parse('$baseUrl/complexSearch$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
       return ResponseModel.fromJson(jsonDecode(response.body));
     } else {

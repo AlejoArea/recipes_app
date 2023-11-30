@@ -1,15 +1,17 @@
 import '../../data/model/recipe_response_model.dart';
 import '../../data/repositories/repository_imp.dart';
 import '../entity/recipe.dart';
+import 'usecase_interface.dart';
 
-class GetRecipeUsecase {
+class GetRecipesUseCase implements IUseCase<Future<List<Recipe>>,int> {
   final Repository repository;
 
-  GetRecipeUsecase({
+  GetRecipesUseCase({
     required this.repository,
   });
 
-  Future<List<Recipe>> getRecipes() async {
+  @override
+  Future<List<Recipe>> call([int? params]) async {
     ResponseModel responseModel = await repository.fetchRecipes();
     return responseModel.results;
   }

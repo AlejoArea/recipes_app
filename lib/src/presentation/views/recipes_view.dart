@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../widgets/recipe_screen_list_view.dart';
 
-class RecipesView extends ConsumerStatefulWidget {
+class RecipesView extends ConsumerWidget {
   const RecipesView({super.key});
 
   @override
-  ConsumerState<RecipesView> createState() => _RecipesViewState();
-}
-
-class _RecipesViewState extends ConsumerState<RecipesView> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Recipes',
+        ),
+      ),
+      body: const RecipesScreenListView(),
+    );
   }
 }
+
