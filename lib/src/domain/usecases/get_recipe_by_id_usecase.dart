@@ -1,10 +1,10 @@
 
 
 import '../../data/repositories/repository_imp.dart';
-import '../entity/recipe.dart';
+import '../entity/detailed_recipe.dart';
 import 'usecase_interface.dart';
 
-class GetRecipeByIdUseCase implements IUseCase{
+class GetRecipeByIdUseCase implements IUseCase<Future<FullRecipe>,int>{
 
   final Repository repository;
 
@@ -13,8 +13,8 @@ class GetRecipeByIdUseCase implements IUseCase{
   });
 
   @override
-  Future<Recipe> call([params]) async {
-    Recipe recipe = await repository.getRecipeById(params);
+  Future<FullRecipe> call([int? params]) async {
+    FullRecipe recipe = await repository.getRecipeById(params!);
     return recipe;
   }
 }

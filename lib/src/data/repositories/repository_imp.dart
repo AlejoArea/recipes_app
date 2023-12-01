@@ -10,6 +10,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:recipes_practice_app/src/domain/repositories/repository_interface.dart';
 
+import '../../domain/entity/detailed_recipe.dart';
 import '../../domain/entity/recipe.dart';
 import '../model/recipe_response_model.dart';
 
@@ -19,11 +20,11 @@ class Repository extends IRepository {
   static const String responseError = 'Response Error';
 
   @override
-  Future<Recipe> getRecipeById(int id) async {
+  Future<FullRecipe> getRecipeById(int id) async {
     final http.Response response =
         await http.get(Uri.parse('$baseUrl$id/information$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
-      return Recipe.fromJson(jsonDecode(response.body));
+      return FullRecipe.fromJson(jsonDecode(response.body));
     } else {
       throw Exception(responseError);
     }
