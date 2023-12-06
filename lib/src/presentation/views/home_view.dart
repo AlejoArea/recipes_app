@@ -36,7 +36,10 @@ class HomeView extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/random_recipe_list',);
+                  Navigator.pushNamed(
+                    context,
+                    '/random_recipe_list',
+                  );
                 },
                 child: const ContainerTileHomePage(
                   titleText: 'Random recipe!',

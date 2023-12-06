@@ -32,7 +32,8 @@ class Repository extends IRepository {
 
   @override
   Future<ResponseModel> fetchRecipes() async {
-    final http.Response response = await http.get(Uri.parse('$baseUrl/complexSearch?$apiKey'));
+    final http.Response response =
+        await http.get(Uri.parse('$baseUrl/complexSearch?$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
       return ResponseModel.fromJson(jsonDecode(response.body));
     } else {
@@ -43,7 +44,7 @@ class Repository extends IRepository {
   @override
   Future<RandomResponseModel> getRandomRecipes() async {
     final http.Response response =
-    await http.get(Uri.parse('${baseUrl}random?${apiKey}&number=3'));
+        await http.get(Uri.parse('${baseUrl}random?${apiKey}&number=3'));
     if (response.statusCode == HttpStatus.ok) {
       return RandomResponseModel.fromJson(jsonDecode(response.body));
     } else {

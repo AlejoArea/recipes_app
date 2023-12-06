@@ -14,13 +14,16 @@ final FutureProvider<List<Recipe>> recipesProvider =
 });
 
 final FutureProvider<List<Recipe>> randomRecipesProvider =
-FutureProvider<List<Recipe>>((FutureProviderRef<List<Recipe>> ref) {
-  final GetRandomRecipesUseCase recipesUseCase = ref.watch(randomRecipesUseCaseProvider);
+    FutureProvider<List<Recipe>>((FutureProviderRef<List<Recipe>> ref) {
+  final GetRandomRecipesUseCase recipesUseCase =
+      ref.watch(randomRecipesUseCaseProvider);
   return recipesUseCase.call();
 });
 
 final FutureProviderFamily<FullRecipe, int> recipeByIdProvider =
-FutureProvider.family<FullRecipe,int>((FutureProviderRef<FullRecipe> ref, int recipeId) {
-  final GetRecipeByIdUseCase recipeByIdUseCase = ref.watch(recipesByIdUseCaseProvider);
+    FutureProvider.family<FullRecipe, int>(
+        (FutureProviderRef<FullRecipe> ref, int recipeId) {
+  final GetRecipeByIdUseCase recipeByIdUseCase =
+      ref.watch(recipesByIdUseCaseProvider);
   return recipeByIdUseCase.call(recipeId);
 });

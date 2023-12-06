@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class LoadingToList extends StatefulWidget {
   const LoadingToList({super.key, required this.imagePath});
+
   final String imagePath;
 
   @override

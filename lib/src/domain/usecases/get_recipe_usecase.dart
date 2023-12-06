@@ -4,7 +4,7 @@ import '../entity/recipe.dart';
 import '../repositories/repository_interface.dart';
 import 'usecase_interface.dart';
 
-class GetRecipesUseCase implements IUseCase<Future<List<Recipe>>,int> {
+class GetRecipesUseCase implements IUseCase<Future<List<Recipe>>, int> {
   final IRepository repository;
 
   GetRecipesUseCase({

@@ -12,8 +12,15 @@ class Routes {
   Map<String, Widget Function(BuildContext)> getRoutes() {
     return <String, Widget Function(BuildContext)>{
       '/home': (BuildContext context) => const HomeView(),
-      '/recipe_list': (BuildContext context) => RecipesView(child: const RecipesScreenListView(logoPath: UiConstants.allRecipesImageLogoPath,),),
-      '/random_recipe_list': (BuildContext context) => RecipesView(child: const RandomRecipesScreenListView(logoPath: UiConstants.randomRecipesImageLogoPath,)),
+      '/recipe_list': (BuildContext context) => RecipesView(
+            child: const RecipesScreenListView(
+              logoPath: UiConstants.allRecipesImageLogoPath,
+            ),
+          ),
+      '/random_recipe_list': (BuildContext context) => RecipesView(
+              child: const RandomRecipesScreenListView(
+            logoPath: UiConstants.randomRecipesImageLogoPath,
+          )),
       '/recipe_details': (BuildContext context) {
         final int recipeId = ModalRoute.of(context)!.settings.arguments as int;
         return RecipesDetails(recipeId: recipeId);

@@ -82,7 +82,7 @@ class _DetailsState extends State<Details> with TickerProviderStateMixin {
                   ExpandableListView(items: widget.recipe.extendedIngredients),
                   const SizedBox(height: 16),
                   const Text(
-                    'Instructions:',
+                    'Summary:',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -93,12 +93,26 @@ class _DetailsState extends State<Details> with TickerProviderStateMixin {
                     widget.recipe.summary,
                     style: const TextStyle(
                       color: Colors.black,
+                      fontSize: 16,
+                      fontFamily: 'Roboto',
+                    ), // Subtitle Style
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Instructions:',
+                    style: TextStyle(
+                      color: Colors.black,
                       fontSize: 18,
                       fontFamily: 'Roboto',
                     ), // Subtitle Style
                   ),
                   Text(
                     widget.recipe.instructions,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontFamily: 'Roboto',
+                    ), // Subtitl
                   ),
                 ],
               ),
