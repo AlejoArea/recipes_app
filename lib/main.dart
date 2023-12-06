@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Recipes App',
-      routes: _routes.getRoutes(),
+      onGenerateRoute: Routes().generateRoute,
       initialRoute: '/home',
     );
   }

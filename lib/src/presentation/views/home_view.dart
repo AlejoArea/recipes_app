@@ -8,6 +8,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const SizedBox(),
         title: const Text(
           'Home Page Recipes',
         ),
