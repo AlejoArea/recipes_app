@@ -51,7 +51,7 @@ class Details extends StatelessWidget {
                   ExpandableListView(items: recipe.extendedIngredients),
                   const SizedBox(height: 16),
                   const Text(
-                    'Instructions:',
+                    'Summary:',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -60,11 +60,18 @@ class Details extends StatelessWidget {
                   ),
                   Text(
                     recipe.summary,
-                    style: const TextStyle(
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Instructions:',
+                    style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 18,
                       fontFamily: 'Roboto',
-                    ), // Text Style
+                    ), // Subtitle Style
+                  ),
+                  Text(
+                    recipe.instructions,
                   ),
                 ],
               ),

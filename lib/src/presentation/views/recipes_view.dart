@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../widgets/recipe_screen_list_view.dart';
+
 
 class RecipesView extends ConsumerWidget {
-  const RecipesView({super.key});
+  RecipesView({super.key, required this.child});
 
+  Widget child;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
@@ -13,7 +14,7 @@ class RecipesView extends ConsumerWidget {
           'Recipes',
         ),
       ),
-      body: const RecipesScreenListView(),
+      body: child,
     );
   }
 }

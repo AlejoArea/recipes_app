@@ -23,6 +23,7 @@ class FullRecipe with _$FullRecipe {
     required List<String> dishTypes,
     required List<Ingredient> extendedIngredients,
     required String summary,
+    required String instructions,
   }) = _FullRecipe;
 
   factory FullRecipe.fromJson(Map<String, dynamic> json) =>

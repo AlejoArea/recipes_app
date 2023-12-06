@@ -1,10 +1,11 @@
 import '../../data/model/recipe_response_model.dart';
-import '../../data/repositories/repository_imp.dart';
+
 import '../entity/recipe.dart';
+import '../repositories/repository_interface.dart';
 import 'usecase_interface.dart';
 
 class GetRecipesUseCase implements IUseCase<Future<List<Recipe>>,int> {
-  final Repository repository;
+  final IRepository repository;
 
   GetRecipesUseCase({
     required this.repository,

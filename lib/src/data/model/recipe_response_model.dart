@@ -5,7 +5,7 @@ import '../../domain/entity/recipe.dart';
 part 'generated/recipe_response_model.freezed.dart';
 part 'generated/recipe_response_model.g.dart';
 
-@Freezed()
+@freezed
 class ResponseModel with _$ResponseModel {
   const factory ResponseModel({
     required List<Recipe> results,

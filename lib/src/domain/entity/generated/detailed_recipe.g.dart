@@ -26,6 +26,7 @@ _$FullRecipeImpl _$$FullRecipeImplFromJson(Map<String, dynamic> json) =>
           .map((e) => Ingredient.fromJson(e as Map<String, dynamic>))
           .toList(),
       summary: json['summary'] as String,
+      instructions: json['instructions'] as String,
     );
 
 Map<String, dynamic> _$$FullRecipeImplToJson(_$FullRecipeImpl instance) =>
@@ -45,4 +46,5 @@ Map<String, dynamic> _$$FullRecipeImplToJson(_$FullRecipeImpl instance) =>
       'dishTypes': instance.dishTypes,
       'extendedIngredients': instance.extendedIngredients,
       'summary': instance.summary,
+      'instructions': instance.instructions,
     };

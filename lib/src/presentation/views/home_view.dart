@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../config/utils/ui_constants.dart';
 import '../widgets/container_homepage_tile.dart';
 
 class HomeView extends StatelessWidget {
@@ -30,14 +31,19 @@ class HomeView extends StatelessWidget {
                   titleText: 'Cook Something New Everyday',
                   subtitleText: 'Look what to cook today in just one click!',
                   color: Colors.red,
-                  imagePath: 'assets/images/foodiev2.png',
+                  imagePath: UiConstants.allRecipesImageLogoPath,
                 ),
               ),
-              const ContainerTileHomePage(
-                titleText: 'Random recipe!',
-                subtitleText: 'Click here for a random recipe for today!',
-                color: Colors.lightGreen,
-                imagePath: 'assets/images/questionmark.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/random_recipe_list',);
+                },
+                child: const ContainerTileHomePage(
+                  titleText: 'Random recipe!',
+                  subtitleText: 'Click to get 3 random recipes for today!',
+                  color: Colors.lightGreen,
+                  imagePath: UiConstants.randomRecipesImageLogoPath,
+                ),
               ),
               const ContainerTileHomePage(
                 titleText: 'Developers',

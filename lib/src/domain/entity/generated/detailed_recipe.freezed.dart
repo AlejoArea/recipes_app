@@ -36,6 +36,7 @@ mixin _$FullRecipe {
   List<Ingredient> get extendedIngredients =>
       throw _privateConstructorUsedError;
   String get summary => throw _privateConstructorUsedError;
+  String get instructions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -64,7 +65,8 @@ abstract class $FullRecipeCopyWith<$Res> {
       bool vegetarian,
       List<String> dishTypes,
       List<Ingredient> extendedIngredients,
-      String summary});
+      String summary,
+      String instructions});
 }
 
 /// @nodoc
@@ -95,6 +97,7 @@ class _$FullRecipeCopyWithImpl<$Res, $Val extends FullRecipe>
     Object? dishTypes = null,
     Object? extendedIngredients = null,
     Object? summary = null,
+    Object? instructions = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -157,6 +160,10 @@ class _$FullRecipeCopyWithImpl<$Res, $Val extends FullRecipe>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
+      instructions: null == instructions
+          ? _value.instructions
+          : instructions // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -184,7 +191,8 @@ abstract class _$$FullRecipeImplCopyWith<$Res>
       bool vegetarian,
       List<String> dishTypes,
       List<Ingredient> extendedIngredients,
-      String summary});
+      String summary,
+      String instructions});
 }
 
 /// @nodoc
@@ -213,6 +221,7 @@ class __$$FullRecipeImplCopyWithImpl<$Res>
     Object? dishTypes = null,
     Object? extendedIngredients = null,
     Object? summary = null,
+    Object? instructions = null,
   }) {
     return _then(_$FullRecipeImpl(
       id: null == id
@@ -275,6 +284,10 @@ class __$$FullRecipeImplCopyWithImpl<$Res>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
+      instructions: null == instructions
+          ? _value.instructions
+          : instructions // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -297,7 +310,8 @@ class _$FullRecipeImpl implements _FullRecipe {
       required this.vegetarian,
       required final List<String> dishTypes,
       required final List<Ingredient> extendedIngredients,
-      required this.summary})
+      required this.summary,
+      required this.instructions})
       : _dishTypes = dishTypes,
         _extendedIngredients = extendedIngredients;
 
@@ -347,10 +361,12 @@ class _$FullRecipeImpl implements _FullRecipe {
 
   @override
   final String summary;
+  @override
+  final String instructions;
 
   @override
   String toString() {
-    return 'FullRecipe(id: $id, title: $title, image: $image, servings: $servings, readyInMinutes: $readyInMinutes, healthScore: $healthScore, pricePerServing: $pricePerServing, cheap: $cheap, dairyFree: $dairyFree, glutenFree: $glutenFree, vegan: $vegan, vegetarian: $vegetarian, dishTypes: $dishTypes, extendedIngredients: $extendedIngredients, summary: $summary)';
+    return 'FullRecipe(id: $id, title: $title, image: $image, servings: $servings, readyInMinutes: $readyInMinutes, healthScore: $healthScore, pricePerServing: $pricePerServing, cheap: $cheap, dairyFree: $dairyFree, glutenFree: $glutenFree, vegan: $vegan, vegetarian: $vegetarian, dishTypes: $dishTypes, extendedIngredients: $extendedIngredients, summary: $summary, instructions: $instructions)';
   }
 
   @override
@@ -381,7 +397,9 @@ class _$FullRecipeImpl implements _FullRecipe {
                 .equals(other._dishTypes, _dishTypes) &&
             const DeepCollectionEquality()
                 .equals(other._extendedIngredients, _extendedIngredients) &&
-            (identical(other.summary, summary) || other.summary == summary));
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.instructions, instructions) ||
+                other.instructions == instructions));
   }
 
   @JsonKey(ignore: true)
@@ -402,7 +420,8 @@ class _$FullRecipeImpl implements _FullRecipe {
       vegetarian,
       const DeepCollectionEquality().hash(_dishTypes),
       const DeepCollectionEquality().hash(_extendedIngredients),
-      summary);
+      summary,
+      instructions);
 
   @JsonKey(ignore: true)
   @override
@@ -434,7 +453,8 @@ abstract class _FullRecipe implements FullRecipe {
       required final bool vegetarian,
       required final List<String> dishTypes,
       required final List<Ingredient> extendedIngredients,
-      required final String summary}) = _$FullRecipeImpl;
+      required final String summary,
+      required final String instructions}) = _$FullRecipeImpl;
 
   factory _FullRecipe.fromJson(Map<String, dynamic> json) =
       _$FullRecipeImpl.fromJson;
@@ -469,6 +489,8 @@ abstract class _FullRecipe implements FullRecipe {
   List<Ingredient> get extendedIngredients;
   @override
   String get summary;
+  @override
+  String get instructions;
   @override
   @JsonKey(ignore: true)
   _$$FullRecipeImplCopyWith<_$FullRecipeImpl> get copyWith =>
