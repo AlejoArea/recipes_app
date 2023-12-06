@@ -98,7 +98,7 @@ class _DetailsState extends State<Details> with TickerProviderStateMixin {
                     ), // Subtitle Style
                   ),
                   Text(
-                    recipe.instructions,
+                    widget.recipe.instructions,
                   ),
                 ],
               ),
