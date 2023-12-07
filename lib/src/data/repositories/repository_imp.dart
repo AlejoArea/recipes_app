@@ -27,7 +27,8 @@ class Repository extends IRepository {
 
   @override
   Future<ResponseModel> fetchRecipes() async {
-    final http.Response response = await http.get(Uri.parse('$baseUrl/complexSearch?$apiKey'));
+    final http.Response response =
+        await http.get(Uri.parse('$baseUrl/complexSearch?$apiKey'));
     if (response.statusCode == HttpStatus.ok) {
       return ResponseModel.fromJson(jsonDecode(response.body));
     } else {

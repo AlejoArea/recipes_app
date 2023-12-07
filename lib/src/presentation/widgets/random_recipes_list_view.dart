@@ -7,13 +7,14 @@ import '../../domain/entity/recipe.dart';
 import '../providers.dart';
 
 class RandomRecipesScreenListView extends ConsumerWidget {
-  const RandomRecipesScreenListView({required this.logoPath,super.key});
+  const RandomRecipesScreenListView({required this.logoPath, super.key});
+
   final String logoPath;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final AsyncValue<List<Recipe>> recipesAsyncValue =
-    ref.watch(randomRecipesProvider);
+        ref.watch(randomRecipesProvider);
     return recipesAsyncValue.when(
       data: (List<Recipe> recipes) {
         // Use the retrieved recipes to build your UI
@@ -31,7 +32,6 @@ class RandomRecipesScreenListView extends ConsumerWidget {
       },
       loading: () => Center(
           child: TransitionLogo(
-        imagePath: logoPath,
       )),
       error: (Object error, StackTrace stackTrace) =>
           Text('Error fetching recipes${error.toString()}'),

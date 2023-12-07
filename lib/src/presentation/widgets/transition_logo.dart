@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-
 class TransitionLogo extends StatefulWidget {
   const TransitionLogo({super.key, required this.imagePath});
+
 
   final String imagePath;
 

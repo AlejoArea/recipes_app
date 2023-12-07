@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../domain/entity/recipe.dart';
 
 part 'generated/random_recipes_response.freezed.dart';
+
 part 'generated/random_recipes_response.g.dart';
 
 @freezed

@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../domain/entity/recipe.dart';
 
 part 'generated/recipe_response_model.freezed.dart';
+
 part 'generated/recipe_response_model.g.dart';
 
 @freezed

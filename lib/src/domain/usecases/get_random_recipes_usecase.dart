@@ -11,7 +11,8 @@ class GetRandomRecipesUseCase
 
   @override
   Future<List<Recipe>> call([params]) async {
-    RandomResponseModel randomResponseModel = await repository.getRandomRecipes();
+    RandomResponseModel randomResponseModel =
+        await repository.getRandomRecipes();
     return randomResponseModel.recipes;
   }
 }
