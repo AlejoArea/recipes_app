@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class LoadingToList extends StatefulWidget {
-  const LoadingToList({super.key, required this.imagePath});
+
+class TransitionLogo extends StatefulWidget {
+  const TransitionLogo({super.key, required this.imagePath});
+
   final String imagePath;
 
   @override
-  State<LoadingToList> createState() => _LoadingToListState();
+  State<TransitionLogo> createState() => _TransitionLogoState();
 }
 
-class _LoadingToListState extends State<LoadingToList>
+class _TransitionLogoState extends State<TransitionLogo>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),

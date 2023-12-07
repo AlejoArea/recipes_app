@@ -9,6 +9,7 @@ import '../providers.dart';
 class RandomRecipesScreenListView extends ConsumerWidget {
   const RandomRecipesScreenListView({required this.logoPath,super.key});
   final String logoPath;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final AsyncValue<List<Recipe>> recipesAsyncValue =
@@ -19,12 +20,21 @@ class RandomRecipesScreenListView extends ConsumerWidget {
         return ListView.builder(
           itemCount: recipes.length,
           itemBuilder: (BuildContext context, int index) {
-            return RecipeListTile(title: recipes[index].title, imagePath: recipes[index].image, id: recipes[index].id,);
+            return RecipeListTile(
+              title: recipes[index].title,
+              imagePath: recipes[index].image,
+              id: recipes[index].id,
+              logoPath: logoPath,
+            );
           },
         );
       },
-      loading: () => Center(child: LoadingToList(imagePath: logoPath,)),
-      error: (Object error, StackTrace stackTrace) => Text('Error fetching recipes${error.toString()}'),
+      loading: () => Center(
+          child: TransitionLogo(
+        imagePath: logoPath,
+      )),
+      error: (Object error, StackTrace stackTrace) =>
+          Text('Error fetching recipes${error.toString()}'),
     );
   }
 }

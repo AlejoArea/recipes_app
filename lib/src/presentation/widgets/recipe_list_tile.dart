@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../../config/utils/argument_routes.dart';
+
 class RecipeListTile extends StatelessWidget {
   const RecipeListTile({
     super.key,
     required this.title,
     required this.imagePath,
     required this.id,
+    required this.logoPath,
   });
 
   final String title;
   final String imagePath;
   final int id;
+  final String logoPath;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +29,7 @@ class RecipeListTile extends StatelessWidget {
               Navigator.pushNamed(
                 context,
                 '/recipe_details',
-                arguments: id,
+                arguments: RoutesArguments(recipeId: id, imagePath: logoPath),
               );
             },
             child: Image.network(imagePath),
