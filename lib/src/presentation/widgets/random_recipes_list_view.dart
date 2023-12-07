@@ -31,8 +31,10 @@ class RandomRecipesScreenListView extends ConsumerWidget {
         );
       },
       loading: () => Center(
-          child: TransitionLogo(
-      )),
+        child: TransitionLogo(
+          imagePath: logoPath,
+        ),
+      ),
       error: (Object error, StackTrace stackTrace) =>
           Text('Error fetching recipes${error.toString()}'),
     );
