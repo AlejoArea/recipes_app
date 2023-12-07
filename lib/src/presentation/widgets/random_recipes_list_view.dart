@@ -25,14 +25,16 @@ class RandomRecipesScreenListView extends ConsumerWidget {
               title: recipes[index].title,
               imagePath: recipes[index].image,
               id: recipes[index].id,
+              logoPath: logoPath,
             );
           },
         );
       },
       loading: () => Center(
-          child: LoadingToList(
-        imagePath: logoPath,
-      )),
+        child: TransitionLogo(
+          imagePath: logoPath,
+        ),
+      ),
       error: (Object error, StackTrace stackTrace) =>
           Text('Error fetching recipes${error.toString()}'),
     );

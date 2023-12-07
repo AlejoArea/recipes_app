@@ -1,8 +1,3 @@
-// API- TO USE: https://spoonacular.com/food-api
-
-//https://api.spoonacular.com/recipes/{id}/information?apiKey=bba7ffa1cf38426487bdd9cf45fdeef7
-
-// https://api.spoonacular.com/recipes/complexSearch?apiKey=bba7ffa1cf38426487bdd9cf45fdeef7
 
 import 'dart:convert';
 import 'dart:io';
@@ -44,7 +39,7 @@ class Repository extends IRepository {
   @override
   Future<RandomResponseModel> getRandomRecipes() async {
     final http.Response response =
-        await http.get(Uri.parse('${baseUrl}random?${apiKey}&number=3'));
+        await http.get(Uri.parse('${baseUrl}random?$apiKey&number=3'));
     if (response.statusCode == HttpStatus.ok) {
       return RandomResponseModel.fromJson(jsonDecode(response.body));
     } else {
